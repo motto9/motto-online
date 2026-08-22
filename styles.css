@@ -83,7 +83,7 @@
   .photo .frame{background:var(--cream);padding:9px 9px 8px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
   .photo .img{width:100%;height:150px;background:linear-gradient(135deg,#e7d0ff,#cfeeff);
     display:flex;align-items:center;justify-content:center;font-family:'Silkscreen',monospace;font-size:8px;color:#8a6ea8;text-align:center}
-  .photo .img img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo .img img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
   .photo .cap{font-family:'Silkscreen',monospace;font-size:9px;letter-spacing:.06em;text-align:center;padding-top:7px}
   .photo .tape{position:absolute;top:-13px;left:50%;width:70px;height:24px;margin-left:-35px;background:rgba(255,246,251,.75);border:2px solid var(--ink);transform:rotate(-6deg)}
   @media(max-width:900px){.photo{display:none}}
