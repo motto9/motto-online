@@ -67,13 +67,16 @@ function renderBento2() {
   const el = $('bento2'); if (!el) return;
   el.innerHTML = (CONTENT.bento2 || []).filter(c => c.enabled !== false).map(c => {
     const cls = 'card b2-' + (c.type || 'medium');
-    const body = esc(c.body).replace(/\n/g, '<br>');
     const kick = c.kicker ? `<div class="kicker">${esc(c.kicker)}</div>` : '';
+    const title = (c.type === 'feature' && c.title) ? `<h2>${esc(c.title)}</h2>` : '';
+    const text = c.body ? `<p>${esc(c.body).replace(/\n/g, '<br>')}</p>` : '';
+    const hasText = kick || title || text;
+    const align = c.type === 'wide' ? ' style="text-align:center"' : '';
     let inner;
-    if (c.type === 'tall') inner = c.image ? `<img class="b2img" src="${esc(c.image)}" alt="">` : `<div class="imgstub">${body}</div>`;
-    else if (c.type === 'feature') inner = `<div class="body">${kick}<h2>${esc(c.title)}</h2><p>${body}</p></div>`;
-    else if (c.type === 'wide') inner = `<div class="body" style="text-align:center">${kick}<p style="margin-top:6px">${body}</p></div>`;
-    else inner = `<div class="body">${kick}<p>${body}</p></div>`;
+    if (c.image && hasText) inner = `<div class="body"${align}>${kick}<img class="b2img inset" src="${esc(c.image)}" alt="">${title}${text}</div>`;
+    else if (c.image) inner = `<img class="b2img" src="${esc(c.image)}" alt="">`;
+    else if (c.type === 'tall') inner = `<div class="imgstub">${c.body ? esc(c.body).replace(/\n/g, '<br>') : 'IMG — drop a picture'}</div>`;
+    else inner = `<div class="body"${align}>${kick}${title}${text}</div>`;
     return c.link
       ? `<a class="${cls}" href="${esc(c.link)}" target="_blank" rel="noreferrer" style="text-decoration:none;color:inherit">${inner}</a>`
       : `<div class="${cls}">${inner}</div>`;

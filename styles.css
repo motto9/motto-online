@@ -123,6 +123,7 @@
   .b2-medium{grid-column:span 2}
   .b2-wide{grid-column:span 6}
   .b2img{width:100%;flex:1;min-height:150px;object-fit:cover;display:block}
+  .b2img.inset{flex:none;min-height:0;height:auto;max-height:220px;border-radius:2px;margin:6px 0 12px}
   .stub .body{position:relative}
   .stub .tag{position:absolute;top:10px;right:12px;font-family:'Silkscreen',monospace;font-size:8px;letter-spacing:.1em;color:#b79fd6}
   .imgstub{flex:1;min-height:150px;margin:0;background:
