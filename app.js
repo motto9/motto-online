@@ -54,7 +54,7 @@ function render() {
   $('nowlink').textContent = c ? c.linkLabel : b.linkLabel;
   $('nowlink').href = c ? c.linkHref : b.linkHref;
   $('fileName').textContent = c ? 'molly_' + c.id + '.txt' : b.fileName;
-  $('headlineLabel').textContent = c ? 'NOW SHOWING' : b.headlineLabel;
+  $('headlineLabel').textContent = b.headlineLabel;
   $('headline').textContent = c ? c.headline : b.headline;
   $('listLabel').textContent = c ? c.listLabel : b.listLabel;
   $('bullets').innerHTML = (c ? c.bullets : b.bullets).map(x => `<div class="b"><span class="st">✦</span><span>${x}</span></div>`).join('');

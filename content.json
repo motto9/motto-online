@@ -134,10 +134,10 @@
     {
       "order": 1,
       "title": "Resume",
-      "kicker": "✦ CV",
+      "kicker": "",
       "type": "feature",
       "body": "notion • apr ‘24–present • technical program manager\nrippling • nov ‘22–mar ‘24 • sr. program manager, web\napple • mar ‘18–oct ‘22 • sr. interactive producer\ncritical mass • may ‘17–mar ‘18 • interactive producer\nddb • mar ‘16–may ‘17 • project manager\nstudied comms & history at upenn",
-      "link": "",
+      "link": "https://www.linkedin.com/in/mollyotto/",
       "enabled": true
     },
     {
@@ -157,7 +157,7 @@
       "type": "medium",
       "body": "",
       "image": "assets/grid/nowplaying.jpg",
-      "link": "https://www.linkedin.com/in/mollyotto/",
+      "link": "",
       "enabled": true
     },
     {
@@ -165,16 +165,16 @@
       "title": "Reading",
       "kicker": "READING",
       "type": "medium",
-      "body": "one day, everyone will have always been against this\nomar el akkad",
+      "body": "one day, everyone will have always been against this by omar el akkad",
       "link": "",
       "enabled": true
     },
     {
       "order": 5,
       "title": "Local",
-      "kicker": "CAFFEINATE",
+      "kicker": "LOCAL",
       "type": "medium",
-      "body": "local caffeine fix: grand coffee",
+      "body": "caffeine fix: grand coffee\naffordable noodle: yamo\ngreen space: mount sutro reserve",
       "link": "https://www.grandcoffeesf.com/",
       "enabled": true
     },
