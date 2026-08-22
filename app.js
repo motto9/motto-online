@@ -48,7 +48,7 @@ function render() {
   document.querySelectorAll('.chip').forEach(el => { const id = el.dataset.id || null; el.setAttribute('aria-pressed', String(id === persona)); });
   document.querySelectorAll('.doll').forEach(el => el.style.display = (el.dataset.art === key ? 'block' : 'none'));
   document.querySelectorAll('.acc').forEach(el => { el.style.display = (el.dataset.slot === key ? 'block' : 'none'); positionAcc(el); });
-  $('nameplate').textContent = c ? 'Molly, ' + c.name : b.nameplate;
+  $('nameplate').textContent = c ? c.name : b.nameplate;
   $('blurb').textContent = c ? c.blurb : b.blurb;
   $('bio').innerHTML = (c ? (c.longVersion || b.longVersion) : b.longVersion);
   $('nowlink').textContent = c ? c.linkLabel : b.linkLabel;
@@ -97,7 +97,7 @@ function renderPlain() {
 /* ---------- ambient ---------- */
 function sparkleField() {
   const f = $('sparkles'); const g = ['✦', '✧', '✶', '·']; let h = '';
-  for (let i = 0; i < 64; i++) {
+  for (let i = 0; i < 96; i++) {
     h += `<span style="left:${((i * 37.3) % 100).toFixed(2)}%;top:${((i * 53.7) % 100).toFixed(2)}%;
       font-size:${8 + ((i * 7) % 14)}px;color:${i % 3 === 0 ? '#ffd76a' : '#fff6fb'};
       animation:om-twinkle ${(2.2 + ((i * 13) % 30) / 10).toFixed(1)}s ease-in-out infinite;
@@ -105,18 +105,18 @@ function sparkleField() {
   }
   f.innerHTML = h;
 }
-function dollHover() {
-  const frame = $('dollframe'); let last = 0;
+function sparkleBurst(el) {
+  let last = 0;
   const cols = ['#ff5fa2', '#ffd76a', '#fff6fb', '#48d8f0'];
-  frame.addEventListener('pointermove', e => {
+  el.addEventListener('pointermove', e => {
     const now = Date.now(); if (now - last < 70) return; last = now;
-    const r = frame.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
     const s = document.createElement('span');
     s.textContent = ['✦', '✧', '✶'][Math.floor(Math.random() * 3)];
     s.style.cssText = `position:absolute;left:${e.clientX - r.left}px;top:${e.clientY - r.top}px;z-index:6;
       pointer-events:none;font-size:${11 + Math.random() * 10}px;color:${cols[Math.floor(Math.random() * cols.length)]};
       text-shadow:1px 1px 0 rgba(42,17,64,.5);animation:om-burst .8s ease-out forwards`;
-    frame.appendChild(s); setTimeout(() => s.remove(), 820);
+    el.appendChild(s); setTimeout(() => s.remove(), 820);
   });
 }
 
@@ -133,7 +133,7 @@ function boot() {
   $('rail').innerHTML = [{ id: null, label: b.label || 'Just Molly Otto', icon: b.icon || 'heart' }].concat(CONTENT.personas)
     .map(p => `<button class="chip" data-id="${p.id === null ? '' : p.id}" aria-pressed="false">${p.icon ? `<img class="chipicon" src="${iconUrl(p.icon)}" alt="">` : ''}<span>${p.label}</span></button>`).join('');
   $('rail').addEventListener('click', e => { const btn = e.target.closest('.chip'); if (!btn) return; persona = btn.dataset.id || null; render(); });
-  buildDoll(); render(); renderPlain(); renderBento2(); sparkleField(); dollHover();
+  buildDoll(); render(); renderPlain(); renderBento2(); sparkleField(); sparkleBurst($('dollframe')); sparkleBurst($('email'));
 }
 
 fetch('content.json').then(r => r.json()).then(d => { CONTENT = d; boot(); })
