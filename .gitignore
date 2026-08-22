@@ -7,6 +7,6 @@ src-dollz/
 proto/
 current-output.html
 preview-test.html
-*.JPG
+/DSCF1072.JPG
 .DS_Store
 .vercel/
