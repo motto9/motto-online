@@ -1,0 +1,188 @@
+{
+  "marquee": "✦ welcome 2 the otto zone ✦ best viewed in netscape navigator ✦ you are visitor #000,412 ✦ please sign my guestbook ✦",
+  "photo": "assets/photo.webp",
+  "email": "molly.otto@gmail.com",
+  "bio": "Molly is a producer, digital strategist, tinkerer, and occasional writer. She helps projects find their shape — by trade she gets things made, for pleasure she makes them. Over a decade in San Francisco doing very San Francisco things: employee twelve at a scrappy startup, ad agency life, global digital campaigns at Apple, getting scolded by AI. You can currently find her working on <a href='https://www.notion.com' target='_blank' rel='noreferrer'>notion.com</a>.",
+  "base": {
+    "nameplate": "Molly",
+    "blurb": "Sentient letterboxd review in a concert tee just trying to touch grass",
+    "longVersion": "Molly is a producer, digital strategist, tinkerer, and occasional writer. She helps projects find their shape — by trade she gets things made, for pleasure she makes them. Over a decade in San Francisco doing very San Francisco things: employee twelve at a scrappy startup, ad agency life, global digital campaigns at Apple, getting scolded by AI. You can currently find her working on <a href='https://www.notion.com' target='_blank' rel='noreferrer'>notion.com</a>.",
+    "linkLabel": "say hi",
+    "linkHref": "mailto:molly.otto@gmail.com",
+    "fileName": "about_molly.txt",
+    "headlineLabel": "THE LONG VERSION",
+    "headline": "Hi, I'm Molly",
+    "listLabel": "THE SHORT VERSION",
+    "bullets": [
+      "Producer by trade, maker by temperament",
+      "San Francisco settled, Rhode Island raised",
+      "Currently building at Notion",
+      "Answers email, eventually"
+    ],
+    "label": "Just Molly Otto",
+    "icon": "heart"
+  },
+  "social": [
+    {
+      "label": "LINKEDIN",
+      "href": "https://www.linkedin.com/in/mollyotto/"
+    },
+    {
+      "label": "LETTERBOXD",
+      "href": "https://letterboxd.com/mottomatic/"
+    }
+  ],
+  "personas": [
+    {
+      "id": "producer",
+      "label": "Producing",
+      "name": "Producer",
+      "art": "producer",
+      "icon": "clipboard",
+      "headline": "Getting dots in a row",
+      "blurb": "Turning a big vague idea into a crisp plan—and then actually shipping it.",
+      "longVersion": "By day, Molly turns big, vague ideas into dated plans with names next to things — scoping, budgeting, and herding design, eng, and legal toward a launch that actually ships. A decade of it: employee twelve at a scrappy startup, agency life, global campaigns at Apple, and now building at <a href='https://www.notion.com' target='_blank' rel='noreferrer'>notion.com</a>.",
+      "linkLabel": "notion.com",
+      "linkHref": "https://www.notion.com",
+      "listLabel": "WHAT SHE ACTUALLY DOES",
+      "bullets": [
+        "Scopes and budgets that survive an ever-changing reality",
+        "Cross-functional herding across design, eng, copy, and more",
+        "Global launches, comms plans, and the calendar behind them",
+        "Calm in the week-of, which is the whole job"
+      ]
+    },
+    {
+      "id": "writer",
+      "label": "Writing",
+      "name": "Writer",
+      "art": "writer",
+      "icon": "computer",
+      "headline": "Occasionally interesting",
+      "blurb": "Writing the doc nobody wanted to write and everybody ends up quoting.",
+      "longVersion": "The writing is occasional but on purpose: briefs a designer can start from, strategy docs people actually finish, headlines and microcopy, the odd essay, and the saddest tweets you've never read. She writes the doc nobody wanted to write and everybody ends up quoting.",
+      "linkLabel": "say hi about a byline",
+      "linkHref": "mailto:molly.otto@gmail.com",
+      "listLabel": "THINGS SHE WRITES",
+      "bullets": [
+        "Briefs and strategy docs that mean something",
+        "Headlines, microcopy, and the odd essay",
+        "The saddest tweets you’ve never read",
+        "Wedding speeches like you dream about"
+      ]
+    },
+    {
+      "id": "crafter",
+      "label": "Making things",
+      "name": "Crafter",
+      "art": "maker",
+      "icon": "embroidery-hoop",
+      "headline": "Hands busy, brain quiet",
+      "blurb": "Making something small and slightly impractical, probably as a gift, probably unfinished.",
+      "longVersion": "Off the clock, Molly makes small, slightly impractical things — hand-bound books with wobbly bindings, blended spices and fresh-baked bread, dusty charcoal figure drawings, and a drawer of works in progress she is entirely unrepentant about.",
+      "linkLabel": "send a craft night invite",
+      "linkHref": "mailto:molly.otto@gmail.com",
+      "listLabel": "CURRENTLY ON THE TABLE",
+      "bullets": [
+        "Hand-made books with wobbly bindings",
+        "Blended spices and fresh-baked bread",
+        "Dusty charcoal figure drawings",
+        "A drawer of works in progress, unrepentant"
+      ]
+    },
+    {
+      "id": "popculture",
+      "label": "Keeping up",
+      "name": "Pop Culture Expert",
+      "art": "keeping-up",
+      "icon": "magazine",
+      "headline": "Extremely, unapologetically online",
+      "blurb": "Knows what happened, why it happened, and which group chat called it first.",
+      "longVersion": "Extremely, unapologetically online: a Letterboxd account with opinions, reality TV taken seriously as a text, celebrity tabloids by way of academic research, and the uncanny ability to trace a meme back to its source.",
+      "linkLabel": "movie opinions",
+      "linkHref": "https://letterboxd.com/mottomatic/",
+      "listLabel": "THE BEAT SHE COVERS",
+      "bullets": [
+        "A pile of ticket stubs like you dream about",
+        "Celebrity tabloids by way of academic research",
+        "Can trace a meme back to its source",
+        "Overly opinionated on the discourse"
+      ]
+    }
+  ],
+  "accessories": {
+    "base": {
+      "key": "axe",
+      "art": "acc-axe",
+      "x": 276,
+      "y": 294,
+      "w": 69,
+      "h": 67
+    },
+    "popculture": {
+      "key": "purse",
+      "art": "acc-purse",
+      "x": 128,
+      "y": 308,
+      "w": 65,
+      "h": 100
+    }
+  },
+  "bento2": [
+    {
+      "order": 1,
+      "title": "TLDR: The CV",
+      "kicker": "✦ RESUME",
+      "type": "feature",
+      "body": "Notion • Apr ‘24–present • Technical Program Manager\nRippling • Nov ‘22–Mar ‘24 • Sr. Program Manager, Web\nApple • Mar ‘18–Oct ‘22 • Sr. Interactive Producer\nCritical Mass • May ‘17–Mar ‘18 • Interactive Producer\nDDB • Mar ‘16–May ‘17 • Project Manager",
+      "link": "",
+      "enabled": true
+    },
+    {
+      "order": 2,
+      "title": "Photo",
+      "kicker": "",
+      "type": "tall",
+      "body": "IMG — drop a picture",
+      "image": "assets/grid/berries.jpg",
+      "link": "",
+      "enabled": true
+    },
+    {
+      "order": 3,
+      "title": "Now playing",
+      "kicker": "NOW PLAYING",
+      "type": "medium",
+      "body": "song — artist",
+      "link": "",
+      "enabled": true
+    },
+    {
+      "order": 4,
+      "title": "Reading",
+      "kicker": "READING",
+      "type": "medium",
+      "body": "One Day, Everyone Will Have Always Been Against This\nOmar El Akkad",
+      "link": "",
+      "enabled": true
+    },
+    {
+      "order": 5,
+      "title": "LinkedIn",
+      "kicker": "LINKEDIN",
+      "type": "medium",
+      "body": "The full resume",
+      "link": "https://www.linkedin.com/in/mollyotto/",
+      "enabled": true
+    },
+    {
+      "order": 6,
+      "title": "Wide banner",
+      "kicker": "✦ WIDE BANNER ✦",
+      "type": "wide",
+      "body": "a full-width strip — a quote, a now-page, a link row, whatever you like.",
+      "link": "",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Only index.html is deployed — everything else is source/scratch.
+tools
+proto
+design-zip
+src-dollz
+img
+current-output.html
+preview-test.html
+DSCF1072.JPG
+DOLL-EXPORT-SPEC.md
+.DS_Store

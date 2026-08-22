@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where's Molly? Online.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Mr+Dafoe&family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <div class="chaos"></div>
+  <div class="scanlines"></div>
+  <div id="sparkles"></div>
+
+  <div class="nost">
+    <span class="lbl">NOSTALGIA</span>
+    <button class="track" id="toggle" aria-label="Toggle nostalgia mode"><span class="knob"></span></button>
+  </div>
+
+  <!-- ============ FANCY (Y2K) ============ -->
+  <div id="fancy" class="content">
+    <div class="marquee"><div id="marquee"></div></div>
+    <div class="wrap">
+
+      <div class="lockup">
+      <div class="whereis">Where's Molly?</div>
+      <div class="wmblock">
+        <svg class="wm" viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Online.">
+          <defs>
+            <linearGradient id="omChrome" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6b3f0c"/><stop offset=".10" stop-color="#b8862c"/>
+              <stop offset=".30" stop-color="#ffe9a8"/><stop offset=".44" stop-color="#fffbe9"/>
+              <stop offset=".50" stop-color="#f0c96a"/><stop offset=".56" stop-color="#c98a2a"/>
+              <stop offset=".70" stop-color="#7a4a0c"/><stop offset=".86" stop-color="#e6b755"/>
+              <stop offset="1" stop-color="#8a5a12"/>
+            </linearGradient>
+            <linearGradient id="omGloss" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity=".95"/>
+              <stop offset=".26" stop-color="#fff" stop-opacity=".4"/>
+              <stop offset=".34" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="omDS" x="-15%" y="-15%" width="140%" height="150%">
+              <feDropShadow dx="4" dy="7" stdDeviation="0" flood-color="#2a1140" flood-opacity=".4"/>
+            </filter>
+            <clipPath id="omClip"><text x="359" y="147" transform="skewX(-9)" font-family="'Archivo Black',sans-serif" font-size="150" text-anchor="middle" letter-spacing="-3">Online.</text></clipPath>
+            <linearGradient id="omShine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g transform="skewX(-9)" filter="url(#omDS)" font-family="'Archivo Black',sans-serif" font-size="150" text-anchor="middle" letter-spacing="-3">
+            <text x="363" y="153" fill="#5c3608">Online.</text>
+            <text x="361" y="150" fill="#7a4a0c">Online.</text>
+            <text x="359" y="147" fill="url(#omChrome)" stroke="#2a1140" stroke-width="3" paint-order="stroke">Online.</text>
+            <text x="359" y="147" fill="url(#omGloss)">Online.</text>
+          </g>
+          <g clip-path="url(#omClip)"><g class="omshine"><rect x="-40" y="-30" width="150" height="270" fill="url(#omShine)" transform="skewX(-16)"/></g></g>
+        </svg>
+        <div class="probably">probably</div>
+      </div>
+      </div>
+      <div class="status"><b>●</b> STATUS: CONNECTED ✦ SAN FRANCISCO, CA</div>
+
+      <div class="pillbar"><div class="pills" id="rail"></div></div>
+
+      <div class="hero">
+        <div class="dollframe" id="dollframe">
+          <div class="shadow"></div>
+          <div class="dolllayer" id="dolllayer"></div>
+        </div>
+        <div class="photo" id="photo">
+          <div class="frame">
+            <div class="img" id="photoImg">retro photo<br>goes here</div>
+            <div class="cap">HI IT'S ME</div>
+          </div>
+          <div class="tape"></div>
+        </div>
+        <div class="draghint" id="draghint"></div>
+        <div class="nameplate" id="nameplate"></div>
+        <p class="blurb" id="blurb"></p>
+      </div>
+
+      <!-- existing bento (unchanged) -->
+      <div class="bento">
+        <div class="card about">
+          <div class="bar"><i></i><i></i><i></i><span class="fn" id="fileName"></span></div>
+          <div class="body">
+            <div class="kicker" id="headlineLabel"></div>
+            <h2 id="headline"></h2>
+            <p id="bio"></p>
+          </div>
+        </div>
+        <div class="card list">
+          <div class="body">
+            <div class="kicker" id="listLabel"></div>
+            <div class="bullets" id="bullets"></div>
+          </div>
+        </div>
+        <div class="card now">
+          <div class="body">
+            <div class="kicker">CURRENTLY</div>
+            <div class="nowbig">✦ <a id="nowlink" href="#" target="_blank" rel="noreferrer"></a></div>
+          </div>
+        </div>
+        <div class="card social">
+          <div class="body">
+            <div class="kicker">ELSEWHERE ON THE WEB</div>
+            <div class="sociallinks" id="social"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW varied bento — placeholder cards to fill later -->
+      <div class="deskrule">✦ ✦ ✦  the rest of the desk  ✦ ✦ ✦</div>
+      <div class="bento2" id="bento2"></div>
+
+      <div class="foot">
+        <a class="email" id="email" href="#" aria-label="Email me">
+          <svg width="58" height="40" viewBox="0 0 104 72" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-hidden="true">
+            <!-- body fill -->
+            <rect x="8" y="8" width="88" height="56" fill="#ffd0e6"/>
+            <!-- flap (stair-stepped V) -->
+            <g fill="#ff5fa2">
+              <rect x="8"  y="8"  width="8" height="8"/><rect x="16" y="16" width="8" height="8"/><rect x="24" y="24" width="8" height="8"/><rect x="32" y="32" width="8" height="8"/><rect x="40" y="40" width="8" height="8"/><rect x="48" y="48" width="8" height="8"/>
+              <rect x="88" y="8"  width="8" height="8"/><rect x="80" y="16" width="8" height="8"/><rect x="72" y="24" width="8" height="8"/><rect x="64" y="32" width="8" height="8"/><rect x="56" y="40" width="8" height="8"/>
+            </g>
+            <!-- highlight speck -->
+            <rect x="16" y="8" width="8" height="8" fill="#fff6fb"/>
+            <!-- ink border -->
+            <g fill="#2a1140">
+              <rect x="0" y="0" width="104" height="8"/><rect x="0" y="64" width="104" height="8"/>
+              <rect x="0" y="8" width="8" height="56"/><rect x="96" y="8" width="8" height="56"/>
+            </g>
+          </svg>
+          <span class="txt">Email me</span>
+          <!-- pixel sparkle -->
+          <svg width="26" height="26" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" aria-hidden="true">
+            <g fill="#ff5fa2">
+              <rect x="18" y="6" width="6" height="6"/><rect x="18" y="12" width="6" height="6"/><rect x="18" y="18" width="6" height="6"/><rect x="18" y="24" width="6" height="6"/><rect x="18" y="30" width="6" height="6"/>
+              <rect x="6" y="18" width="6" height="6"/><rect x="12" y="18" width="6" height="6"/><rect x="24" y="18" width="6" height="6"/><rect x="30" y="18" width="6" height="6"/>
+            </g>
+            <rect x="18" y="18" width="6" height="6" fill="#ffd0e6"/>
+          </svg>
+        </a>
+        <div class="copyright" id="copyright"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PLAIN ============ -->
+  <div id="plain"><div class="inner" id="plainInner"></div></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

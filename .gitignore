@@ -1,0 +1,12 @@
+# scratch / source-only (not part of the deployed site)
+node_modules/
+tools/
+img/
+design-zip/
+src-dollz/
+proto/
+current-output.html
+preview-test.html
+*.JPG
+.DS_Store
+.vercel/
