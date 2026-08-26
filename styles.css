@@ -144,11 +144,36 @@
   .email .txt{font-family:'Archivo Black',sans-serif;font-size:34px;text-transform:uppercase;text-shadow:3px 3px 0 var(--cream)}
   .copyright{font-family:'Silkscreen',monospace;font-size:9px;line-height:1.9;color:#5b3a7a;text-align:center;padding-top:8px}
 
-  /* plain mode */
-  #plain{display:none;position:relative;z-index:6;min-height:100vh;background:#fffdf9}
+  /* plain mode — editorial, left-aligned (Kinfolk / gallery restraint) */
+  #plain{display:none;position:relative;z-index:6;min-height:100vh;background:#faf9f6}
   body.plain #fancy{display:none} body.plain #plain{display:block}
   body.plain .chaos,body.plain #sparkles,body.plain .scanlines{display:none}
-  #plain .inner{max-width:620px;margin:0 auto;padding:56px 24px 90px;font-family:Georgia,'Times New Roman',serif;color:#1c1c1c;font-size:17px;line-height:1.65}
-  #plain a{color:#0645ad} #plain h1{margin:0;font-size:30px;font-weight:400;letter-spacing:-.01em}
-  #plain h2{font-size:19px;font-weight:400;font-style:italic}
-  #plain .sub{margin:4px 0 26px;color:#666;font-size:15px}
+  #plain .inner{
+    max-width:640px;margin:0;padding:120px 32px 140px 96px;
+    font-family:-apple-system,'Helvetica Neue','Segoe UI',Arial,sans-serif;
+    color:#1a1a1a;font-size:17px;line-height:1.72;font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  #plain a{color:#1a1a1a;text-decoration:none;border-bottom:1px solid #bbb}
+  #plain a:hover{border-bottom-color:#1a1a1a}
+  #plain .masthead{margin-bottom:64px}
+  #plain h1{margin:0;font-size:26px;font-weight:600;letter-spacing:-.01em}
+  #plain .sub{margin:8px 0 0;color:#8a8a8a;font-size:15px;letter-spacing:.01em}
+  #plain section{margin:0 0 56px;max-width:560px}
+  #plain h2{margin:0 0 14px;font-size:20px;font-weight:600;letter-spacing:-.005em}
+  #plain .dek{margin:0 0 14px;color:#6a6a6a;font-style:italic;font-size:17px}
+  #plain .lede{font-size:19px;line-height:1.65}
+  #plain p{margin:0 0 14px}
+  #plain .label{
+    margin:24px 0 10px;font-size:11px;font-weight:600;letter-spacing:.14em;
+    text-transform:uppercase;color:#9a9a9a;
+  }
+  #plain ul{margin:0 0 4px;padding:0;list-style:none}
+  #plain li{position:relative;padding-left:20px;margin-bottom:6px;color:#333}
+  #plain ul li::before{content:'—';position:absolute;left:0;color:#c0c0c0}
+  #plain .links li::before{content:''}
+  #plain .links li{padding-left:0}
+  #plain .more{margin-top:14px;font-size:15px}
+  #plain .deskitem{margin-bottom:22px}
+  #plain .deskitem .label{margin-top:0}
+  @media(max-width:640px){#plain .inner{padding:80px 24px 100px}}

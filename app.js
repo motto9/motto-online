@@ -83,18 +83,64 @@ function renderBento2() {
   }).join('');
 }
 
-/* ---------- plain (nostalgia off) ---------- */
+/* ---------- plain (nostalgia off) ----------
+   A full, unstyled text edition of the site — same copy as the fancy view,
+   nothing dropped. Editorial / left-aligned. */
+const tc = s => s ? s.charAt(0) + s.slice(1).toLowerCase() : s;
+const ul = arr => `<ul>${(arr || []).map(b => `<li>${b}</li>`).join('')}</ul>`;
+
 function renderPlain() {
-  $('plainInner').innerHTML =
-    `<h1>Molly Otto</h1><p class="sub">Producer &amp; digital strategist. San Francisco.</p>
-     <p>${CONTENT.bio}</p>
-     ${CONTENT.personas.map(p => `<div style="margin-bottom:26px"><h2>${p.label}</h2><p>${p.blurb}</p>
-       <ul style="margin:0;padding-left:20px">${p.bullets.map(b => `<li style="margin-bottom:3px">${b}</li>`).join('')}</ul></div>`).join('')}
-     <h2 style="margin-top:34px">Get in touch</h2>
-     <ul style="margin:0;padding-left:20px">
-       <li><a href="mailto:${CONTENT.email}">${CONTENT.email}</a></li>
-       ${CONTENT.social.map(s => `<li><a href="${s.href}" target="_blank" rel="noreferrer">${s.label[0] + s.label.slice(1).toLowerCase()}</a></li>`).join('')}
-     </ul>`;
+  const b = CONTENT.base;
+  const parts = [];
+
+  // masthead
+  parts.push(`<header class="masthead">
+    <h1>Molly Otto</h1>
+    <p class="sub">Producer &amp; digital strategist — San Francisco</p>
+  </header>`);
+
+  // about
+  parts.push(`<section>
+    <p class="lede">${b.longVersion || CONTENT.bio}</p>
+    <p class="label">${b.listLabel || 'In short'}</p>
+    ${ul(b.bullets)}
+  </section>`);
+
+  // the personas / what she does
+  CONTENT.personas.forEach(p => {
+    parts.push(`<section>
+      <h2>${p.name || p.label}</h2>
+      ${p.headline ? `<p class="dek">${p.headline}</p>` : ''}
+      ${p.longVersion ? `<p>${p.longVersion}</p>` : (p.blurb ? `<p>${p.blurb}</p>` : '')}
+      ${p.listLabel ? `<p class="label">${p.listLabel}</p>` : ''}
+      ${ul(p.bullets)}
+      ${p.linkHref && p.linkLabel ? `<p class="more"><a href="${p.linkHref}"${/^https?:/.test(p.linkHref) ? ' target="_blank" rel="noreferrer"' : ''}>${p.linkLabel} →</a></p>` : ''}
+    </section>`);
+  });
+
+  // the rest of the desk — bento2 cards
+  const desk = (CONTENT.bento2 || []).filter(c => c.enabled !== false && c.body);
+  if (desk.length) {
+    parts.push(`<section><h2>The rest of the desk</h2>${desk.map(c => {
+      const head = c.kicker ? c.kicker.replace(/[✦\s]+/g, ' ').trim() : (c.title || '');
+      const body = c.body ? esc(c.body).replace(/\n/g, '<br>') : '';
+      const inner = c.link
+        ? `<p>${body || esc(c.title)} <a href="${esc(c.link)}" target="_blank" rel="noreferrer">→</a></p>`
+        : (body ? `<p>${body}</p>` : '');
+      return `<div class="deskitem">${head ? `<p class="label">${esc(head)}</p>` : ''}${inner}</div>`;
+    }).join('')}</section>`);
+  }
+
+  // contact
+  parts.push(`<section>
+    <h2>Elsewhere</h2>
+    <ul class="links">
+      <li><a href="mailto:${CONTENT.email}">${CONTENT.email}</a></li>
+      ${CONTENT.social.map(s => `<li><a href="${s.href}" target="_blank" rel="noreferrer">${tc(s.label)}</a></li>`).join('')}
+    </ul>
+  </section>`);
+
+  $('plainInner').innerHTML = parts.join('');
 }
 
 /* ---------- ambient ---------- */
