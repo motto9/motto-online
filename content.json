@@ -41,7 +41,7 @@
       "icon": "clipboard",
       "headline": "Getting dots in a row",
       "blurb": "Turning a big vague idea into a crisp plan—and then actually shipping it.",
-      "longVersion": "By day, Molly turns big, vague ideas into dated plans with names next to things. Scoping, budgeting, and herding design, eng, and legal toward a launch that actually ships. A decade plus of SF: employee twelve at a scrappy startup, agency life, global campaigns at Apple, and now building at <a href='https://www.notion.com' target='_blank' rel='noreferrer'>notion.com</a>.",
+      "longVersion": "Molly takes big, vague ideas and gives them a point of view, a plan, and somewhere to be on Tuesday. She’s spent 10+ years helping creative and technical teams turn strategy into shipped work. Currently doing all that at <a href='https://www.notion.com' target='_blank' rel='noreferrer'>notion.com</a>.",
       "linkLabel": "notion.com",
       "linkHref": "https://www.notion.com",
       "listLabel": "WHAT SHE ACTUALLY DOES",
@@ -133,10 +133,10 @@
   "bento2": [
     {
       "order": 1,
-      "title": "Resume",
-      "kicker": "",
+      "title": "Where I’ve worked",
+      "kicker": "THE CV",
       "type": "feature",
-      "body": "notion • apr ‘24–present • technical program manager\nrippling • nov ‘22–mar ‘24 • sr. program manager, web\napple • mar ‘18–oct ‘22 • sr. interactive producer\ncritical mass • may ‘17–mar ‘18 • interactive producer\nddb • mar ‘16–may ‘17 • project manager\nstudied comms & history at upenn",
+      "body": "Notion, Technical Program Manager\nRippling, Sr. Program Manager, Web\nApple, Sr. Interactive Producer\nCritical Mass, Producer\nDDB. Project Manager\nStudied comms & history at UPenn",
       "link": "https://www.linkedin.com/in/mollyotto/",
       "enabled": true
     },
@@ -162,20 +162,22 @@
     },
     {
       "order": 4,
-      "title": "Reading",
-      "kicker": "READING",
+      "title": "Travel",
+      "kicker": "WANDERING",
       "type": "medium",
-      "body": "one day, everyone will have always been against this by omar el akkad",
+      "body": "",
+      "image": "assets/grid/travel.jpg",
       "link": "",
       "enabled": true
     },
     {
       "order": 5,
-      "title": "Local",
-      "kicker": "LOCAL",
+      "title": "Craft",
+      "kicker": "HAND BOUND",
       "type": "medium",
-      "body": "caffeine fix: grand coffee\naffordable noodle: yamo\ngreen space: mount sutro reserve",
-      "link": "https://www.grandcoffeesf.com/",
+      "body": "",
+      "image": "assets/grid/craft.jpg",
+      "link": "",
       "enabled": true
     },
     {
@@ -183,9 +185,9 @@
       "title": "Current side quest",
       "kicker": "✦ CURRENT SIDE QUEST ✦",
       "type": "wide",
-      "body": "digitizing all of my family photos and memories and syncing them to one big sortable notion archive",
+      "body": "Digitizing all of my family photos and memories and syncing them to one big sortable notion archive",
       "link": "",
-      "enabled": true
+      "enabled": false
     }
   ]
 }
