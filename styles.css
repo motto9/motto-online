@@ -154,26 +154,28 @@
   .copyright{font-family:'Silkscreen',monospace;font-size:9px;line-height:1.9;color:#5b3a7a;text-align:center;padding-top:8px}
 
   /* plain mode — editorial, left-aligned (Kinfolk / gallery restraint) */
+  @font-face{font-family:'Gambarino';src:url('assets/fonts/gambarino.woff2') format('woff2'),url('assets/fonts/gambarino.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
   #plain{display:none;position:relative;z-index:6;min-height:100vh;background:#faf9f6}
   body.plain #fancy{display:none} body.plain #plain{display:block}
   body.plain .chaos,body.plain #sparkles,body.plain .scanlines{display:none}
   #plain .inner{
-    max-width:640px;margin:0;padding:120px 32px 140px 96px;
-    font-family:-apple-system,'Helvetica Neue','Segoe UI',Arial,sans-serif;
-    color:#1a1a1a;font-size:17px;line-height:1.72;font-weight:400;
+    max-width:688px;margin:0;padding:120px 32px 140px 144px;
+    font-family:'Gambarino',Georgia,'Times New Roman',serif;
+    color:#1a1a1a;font-size:18px;line-height:1.68;font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
-  #plain a{color:#1a1a1a;text-decoration:none;border-bottom:1px solid #bbb}
+  #plain a{font-family:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;color:#1a1a1a;text-decoration:none;border-bottom:1px solid #bbb}
   #plain a:hover{border-bottom-color:#1a1a1a}
   #plain .masthead{margin-bottom:64px}
-  #plain h1{margin:0;font-size:26px;font-weight:600;letter-spacing:-.01em}
-  #plain .sub{margin:8px 0 0;color:#8a8a8a;font-size:15px;letter-spacing:.01em}
+  #plain h1{margin:0;font-size:32px;font-weight:400;letter-spacing:-.01em}
+  #plain .sub{font-family:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;margin:10px 0 0;color:#8a8a8a;font-size:14px;letter-spacing:.01em}
   #plain section{margin:0 0 56px;max-width:560px}
-  #plain h2{margin:0 0 14px;font-size:20px;font-weight:600;letter-spacing:-.005em}
-  #plain .dek{margin:0 0 14px;color:#6a6a6a;font-style:italic;font-size:17px}
+  #plain h2{margin:0 0 14px;font-size:23px;font-weight:400;letter-spacing:-.005em}
+  #plain .dek{margin:0 0 14px;color:#6a6a6a;font-style:italic;font-size:18px}
   #plain .lede{font-size:19px;line-height:1.65}
   #plain p{margin:0 0 14px}
   #plain .label{
+    font-family:'Inter',-apple-system,'Helvetica Neue',Arial,sans-serif;
     margin:24px 0 10px;font-size:11px;font-weight:600;letter-spacing:.14em;
     text-transform:uppercase;color:#9a9a9a;
   }

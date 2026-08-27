@@ -96,7 +96,7 @@ function renderPlain() {
   // masthead
   parts.push(`<header class="masthead">
     <h1>Molly Otto</h1>
-    <p class="sub">Producer &amp; digital strategist — San Francisco</p>
+    <p class="sub">San Francisco</p>
   </header>`);
 
   // about
