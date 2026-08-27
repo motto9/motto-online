@@ -122,6 +122,8 @@
   .b2-tall{grid-column:span 2;grid-row:span 2}
   .b2-medium{grid-column:span 2}
   .b2-wide{grid-column:span 6}
+  /* "fit to content" (Notion opt-in): card hugs its content instead of stretching to the row */
+  .b2-fit{align-self:start}
   .b2img{width:100%;flex:1;min-height:150px;object-fit:cover;display:block}
   .b2img.inset{flex:none;min-height:0;height:auto;max-height:220px;border-radius:2px;margin:6px 0 12px}
   .stub .body{position:relative}
@@ -135,6 +137,13 @@
     .card.about,.card.list,.card.now,.card.social{grid-column:auto;grid-row:auto}
     .bento2{grid-template-columns:1fr}
     .b2-feature,.b2-tall,.b2-medium,.b2-wide{grid-column:auto;grid-row:auto}
+  }
+  /* phones: full-bleed pill bar, compact chips → ~2 lines at 400px (3 on very small) */
+  @media(max-width:480px){
+    .pillbar{padding:0 6px}
+    .pills{width:100%;gap:6px;padding:7px 8px;border-radius:20px}
+    .chip{font-size:10px;padding:6px 9px;gap:5px;letter-spacing:0}
+    .chipicon{height:13px}
   }
 
   /* footer + pixel email */

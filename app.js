@@ -66,7 +66,7 @@ function render() {
 function renderBento2() {
   const el = $('bento2'); if (!el) return;
   el.innerHTML = (CONTENT.bento2 || []).filter(c => c.enabled !== false).map(c => {
-    const cls = 'card b2-' + (c.type || 'medium');
+    const cls = 'card b2-' + (c.type || 'medium') + (c.fit ? ' b2-fit' : '');
     const kick = c.kicker ? `<div class="kicker">${esc(c.kicker)}</div>` : '';
     const title = (c.type === 'feature' && c.title) ? `<h2>${esc(c.title)}</h2>` : '';
     const text = c.body ? `<p>${esc(c.body).replace(/\n/g, '<br>')}</p>` : '';

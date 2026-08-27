@@ -158,7 +158,8 @@
       "body": "",
       "image": "assets/grid/nowplaying.jpg",
       "link": "",
-      "enabled": true
+      "enabled": true,
+      "fit": true
     },
     {
       "order": 4,
@@ -168,7 +169,8 @@
       "body": "",
       "image": "assets/grid/travel.jpg",
       "link": "",
-      "enabled": true
+      "enabled": true,
+      "fit": true
     },
     {
       "order": 5,
@@ -178,7 +180,8 @@
       "body": "",
       "image": "assets/grid/craft.jpg",
       "link": "",
-      "enabled": true
+      "enabled": true,
+      "fit": true
     },
     {
       "order": 6,
